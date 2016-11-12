@@ -4,11 +4,6 @@ import ToDoItem from './ToDoItem'
 
 
 class ToDoList extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-    };
-  }
   render() {
     var self = this
     var todoListNodes = Object.keys(this.props.list).map(function(item, index) {
