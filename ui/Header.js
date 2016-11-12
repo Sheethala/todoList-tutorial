@@ -5,7 +5,6 @@ class Header extends Component {
   render() {
     return (
       <View style={styles.header}>
-        <Text style={styles.title}>Hackathon To-do List</Text>
       </View>
     );
   }

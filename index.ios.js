@@ -10,7 +10,6 @@ export default class todoList extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Main />
       </View>
     );
   }
