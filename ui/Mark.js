@@ -9,7 +9,7 @@ class Mark extends Component {
   }
   render() {
     return (
-      <View style={styles.container}>
+      <View style={this.props.active ? styles.activeContainer : styles.container}>
       </View>
     );
   }
@@ -22,6 +22,15 @@ const styles = StyleSheet.create({
     width: 20,
     borderWidth: 1,
     borderColor: '#0096B8',
+    marginRight: 10
+  },
+  activeContainer: {
+    borderRadius: 20,
+    height: 20,
+    width: 20,
+    borderWidth: 1,
+    borderColor: '#0096B8',
+    backgroundColor: '#0096B8',
     marginRight: 10
   },
 });

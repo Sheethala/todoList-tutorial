@@ -1,19 +1,26 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableHighlight } from 'react-native';
 import Mark from './Mark'
 
 class ToDoItem extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-    };
+  handleToggleActive() {
+    this.props.onToggleActive(this.props.title)
+  }
+  handleRemoveItem() {
+    this.props.onRemoveItem(this.props.title)
   }
   render() {
     return (
       <View style={styles.container}>
-        <Mark />
-        <Text style={styles.text}>item</Text>
-        <Image style={styles.image} source={require('./images/iconCross.png')} />
+        <TouchableHighlight underlayColor="transparent" onPress={this.handleToggleActive.bind(this)} >
+          <View>
+            <Mark active={ this.props.active } />
+          </View>
+        </TouchableHighlight>
+        <Text style={styles.text}>{ this.props.title }</Text>
+        <TouchableHighlight underlayColor="transparent" onPress={this.handleRemoveItem.bind(this)} >
+          <Image style={styles.image} source={require('./images/iconCross.png')} />
+        </TouchableHighlight>
       </View>
     );
   }

@@ -10,7 +10,7 @@ class Header extends Component {
   render() {
     return (
       <View style={styles.header}>
-        <Text style={styles.title}>Header</Text>
+        <Text style={styles.title}>Hackathon To-do List</Text>
       </View>
     );
   }
@@ -18,6 +18,7 @@ class Header extends Component {
 
 const styles = StyleSheet.create({
   header: {
+    paddingTop: 5,
     height: 60,
     width: Dimensions.get('window').width,
     flexDirection: 'row',
